@@ -17,7 +17,7 @@ class _AnimatedLogoState extends State<AnimatedLogo>
     super.initState();
     controller =
         AnimationController(duration: const Duration(seconds: 3), vsync: this);
-    animation = Tween<double>(begin: 0, end: 300).animate(controller)
+    animation = Tween<double>(begin: 0, end: 400).animate(controller)
       ..addListener(() {
         setState(() {
           // The state that has changed here is the animation object’s value.

@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import '../bottom_navbar/main_navigation_bottom_navbar.dart';
+import '../home/home_page.dart';
 import '../splash/splash_screen.dart';
 
 
-import 'constants.dart';
+import 'router_path_constants.dart';
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case '/':
+      case splashRoute:
         return MaterialPageRoute(builder: (_) => SplashScreen());
+        case homeRoute:
+        return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
 //      case signUpRoute:
 //        return MaterialPageRoute(builder: (_) => SignUpPage());
 //      case otpInputPageRoute:

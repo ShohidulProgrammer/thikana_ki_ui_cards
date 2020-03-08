@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'my_silver_app_bar.dart';
-import 'silver_tab_bar.dart';
+import 'tab_bar_body.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -17,23 +11,16 @@ class _HomePageState extends State<HomePage> {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverPersistentHeader(
-
               delegate: MySliverAppBar(
-                  expandedHeight:  MediaQuery.of(context).size.width),
+                  expandedHeight: MediaQuery.of(context).size.width),
             ),
           ];
         },
         body: TabBarView(
           children: <Widget>[
-            Center(
-              child: Text("Sample text 1"),
-            ),
-            Center(
-              child: Text("Sample text 2"),
-            ),
-            Center(
-              child: Text("Sample text 3"),
-            ),
+            TabBarBody(),
+            TabBarBody(),
+            TabBarBody(),
           ],
         ),
       ),

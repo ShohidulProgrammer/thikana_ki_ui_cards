@@ -16,16 +16,16 @@ class SilverTabBar extends StatelessWidget {
             tabs: [
               Tab(
               icon: Icon(Icons.category),
-//                  text: "Category"
+                  text: "Category"
                   ),
               Tab(
               icon: Icon(Icons.branding_watermark),
-//                  text: "Best Brands",
+                  text: "Best Brands",
 
               ),
               Tab(
               icon: Icon(Icons.shopping_cart),
-//                  text: "Online Shop"
+                  text: "Online Shop"
               ),
             ],
           ),

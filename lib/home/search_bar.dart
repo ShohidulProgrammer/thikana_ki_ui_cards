@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'GoogleMap.dart';
-
 class SearchBar extends StatefulWidget {
   @override
   _SearchBarState createState() => _SearchBarState();
@@ -12,7 +10,7 @@ class _SearchBarState extends State<SearchBar> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.only(left: 26, right: 26,bottom: 60),
+        padding: EdgeInsets.only(left: 26, right: 26, bottom: 90),
         child: Card(
           margin: EdgeInsets.all(0),
           shape: RoundedRectangleBorder(
@@ -43,6 +41,12 @@ class _SearchBarState extends State<SearchBar> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Expanded(
+//                          child: TextFormField(
+//                            decoration: InputDecoration(
+//                              border: InputBorder.none,
+//                              labelText: 'Search Location',
+//                            ),
+//                          ),
                           child: Text(
                             'Search Location',
 //                          child: Text(

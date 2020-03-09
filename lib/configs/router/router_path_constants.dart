@@ -6,5 +6,7 @@ const String otpInputPageRoute = '/otpInputPage';
 const String profilePageRoute = '/profilePage';
 const String categoryPageRoute = "/category";
 const String listProductPageRoute = "/listProduct";
+const String productDetailPageRoute = "/productDetail";
+
 
 

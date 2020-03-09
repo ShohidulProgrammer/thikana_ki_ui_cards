@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/screens/bottom_navbar/main_navigation_bottom_navbar.dart';
-import 'package:thikana_ki/screens/category/category.dart';
-import 'package:thikana_ki/screens/splash/splash_screen.dart';
+import '../../screens/bottom_navbar/main_navigation_bottom_navbar.dart';
+import '../../screens/category/category.dart';
+import '../../screens/list_product/list_product.dart';
+import '../../screens/splash/splash_screen.dart';
 import 'router_path_constants.dart';
 
 class Router {
@@ -13,6 +14,12 @@ class Router {
         return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
+
+      case listProductPageRoute:
+        final category = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) => ListProduct(title: category),
+        );
 //      case signUpRoute:
 //        return MaterialPageRoute(builder: (_) => SignUpPage());
 //      case otpInputPageRoute:

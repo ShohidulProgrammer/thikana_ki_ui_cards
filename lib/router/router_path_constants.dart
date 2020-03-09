@@ -1,5 +1,5 @@
 /// This file contains all the routing constants used within the app
-const String splashRoute = 'splash';
+const String splashRoute = 'screens.splash';
 const String homeRoute = '/';
 const String signUpRoute = '/signUp';
 const String otpInputPageRoute = '/otpInputPage';

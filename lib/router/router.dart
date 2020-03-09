@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../bottom_navbar/main_navigation_bottom_navbar.dart';
-import '../home/home_page.dart';
-import '../splash/splash_screen.dart';
+import '../screens/bottom_navbar/main_navigation_bottom_navbar.dart';
+import '../screens/splash/splash_screen.dart';
 
 
 import 'router_path_constants.dart';

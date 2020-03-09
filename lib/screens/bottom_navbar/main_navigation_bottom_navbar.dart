@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/bottom_navbar/bottom_menu_item.dart';
-import '../home/home_page.dart';
-import '../utils/language/translate.dart';
+import '../bottom_navbar/bottom_menu_item.dart';
+import '../../home/home_page.dart';
+
 
 class MainNavigationBottomNavBar extends StatefulWidget {
   @override

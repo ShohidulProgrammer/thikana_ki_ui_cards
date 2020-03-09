@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/api/api.dart';
-import 'package:thikana_ki/models/model_category.dart';
-import 'package:thikana_ki/models/model_result_api.dart';
 import 'package:thikana_ki/models/screen_models/screen_models.dart';
 import 'package:thikana_ki/utils/navigation/tap_service.dart';
 

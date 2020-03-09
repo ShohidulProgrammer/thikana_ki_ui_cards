@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/router/router_path_constants.dart';
+import '../../configs/router/router_path_constants.dart';
 import 'animated_logo.dart';
 import 'app_bangla_logo.dart';
 

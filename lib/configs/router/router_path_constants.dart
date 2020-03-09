@@ -4,5 +4,7 @@ const String homeRoute = '/';
 const String signUpRoute = '/signUp';
 const String otpInputPageRoute = '/otpInputPage';
 const String profilePageRoute = '/profilePage';
+const String categoryPageRoute = "/category";
+const String listProductPageRoute = "/listProduct";
 
 

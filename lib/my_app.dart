@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import './router/router_path_constants.dart';
-
+import 'configs/router/router_path_constants.dart';
+import 'configs/router/routes.dart';
 import 'configs/theme/theme.dart';
-import 'router/router.dart';
 
 class MyApp extends StatelessWidget {
   @override

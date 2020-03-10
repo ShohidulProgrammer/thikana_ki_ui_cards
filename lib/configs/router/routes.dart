@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/screens/popular/popular_categroy_iem_list_factory.dart';
 import '../../screens/bottom_navbar/main_navigation_bottom_navbar.dart';
 import '../../screens/category/category.dart';
 import '../../screens/list_product/list_product.dart';
@@ -19,6 +20,13 @@ class Router {
         final category = settings.arguments;
         return MaterialPageRoute(
           builder: (context) => ListProduct(title: category),
+        );
+
+      case PopularCategoryListFactoryPageRoute:
+        final popularTitle = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) =>
+              PopularCategoryListFactory(popularTitle: popularTitle),
         );
 //      case signUpRoute:
 //        return MaterialPageRoute(builder: (_) => SignUpPage());

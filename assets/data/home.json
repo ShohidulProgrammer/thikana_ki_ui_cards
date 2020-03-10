@@ -18,7 +18,7 @@
       },
       {
         "id": 2,
-        "name": "Coffee & Bar",
+        "name": "Tea & Coffee",
         "count": 54,
         "image": "assets/images/category-2.jpg",
         "icon": "local_drink",
@@ -72,11 +72,11 @@
       }
     ],
     "popular": [
-      {"id": 1, "title": "Michigan", "image": "assets/images/place-1.jpg"},
-      {"id": 2, "title": "Colorado", "image": "assets/images/place-2.jpg"},
-      {"id": 3, "title": "Utah", "image": "assets/images/trip-6.jpg"},
-      {"id": 4, "title": "King Utah", "image": "assets/images/trip-4.jpg"},
-      {"id": 5, "title": "Colorado", "image": "assets/images/trip-5.jpg"}
+      {"id": 1, "totalItem" : 5, "title": "Michigan", "image": "assets/images/place-1.jpg"},
+      {"id": 2, "totalItem" : 8, "title": "Colorado", "image": "assets/images/place-2.jpg"},
+      {"id": 3, "totalItem" : 4, "title": "Utah", "image": "assets/images/trip-6.jpg"},
+      {"id": 4, "totalItem" : 9, "title": "King Utah", "image": "assets/images/trip-4.jpg"},
+      {"id": 5, "totalItem" : 2, "title": "Colorado", "image": "assets/images/trip-5.jpg"}
     ],
     "list": [
       {

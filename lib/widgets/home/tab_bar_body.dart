@@ -5,7 +5,7 @@ import 'package:thikana_ki/components/build_popular.dart';
 import 'package:thikana_ki/models/model_category.dart';
 import 'package:thikana_ki/models/model_result_api.dart';
 import 'package:thikana_ki/models/screen_models/screen_models.dart';
-import 'package:thikana_ki/widgets/category_title.dart';
+import 'package:thikana_ki/widgets/home/category_title.dart';
 
 import 'category_icon.dart';
 
@@ -38,18 +38,18 @@ class _TabBarBodyState extends State<TabBarBody> {
               title: 'Emergency', image: 'assets/images/emergency.png'),
           Container(
             height: 195,
-            child: CategoryImageCards(homePageModel: _homePage),
+            child: CategoryImageCardFactory(homePageModel: _homePage),
 //            child: _buildPopular(),
           ),
           CategoryTitle(title: 'Get Offers', image: 'assets/images/offers.png'),
           Container(
             height: 195,
-            child: CategoryImageCards(homePageModel: _homePage),
+            child: CategoryImageCardFactory(homePageModel: _homePage),
           ),
           CategoryTitle(title: 'Partners', image: 'assets/images/partners.png'),
           Container(
             height: 195,
-            child: CategoryImageCards(homePageModel: _homePage),
+            child: CategoryImageCardFactory(homePageModel: _homePage),
           ),
         ],
       ),

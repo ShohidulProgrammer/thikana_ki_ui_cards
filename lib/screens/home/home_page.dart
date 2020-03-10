@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'my_silver_app_bar.dart';
-import 'tab_bar_body.dart';
+import '../../widgets/home/my_silver_app_bar.dart';
+import '../../widgets/home/tab_bar_body.dart';
 
 class HomePage extends StatelessWidget {
   @override

@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
+import 'package:thikana_ki/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/models/screen_models/screen_models.dart';
 import 'package:thikana_ki/widgets/app_card.dart';
 
 ///Build category UI
-class CategoryImageCards extends StatelessWidget {
+class CategoryImageCardFactory extends StatelessWidget {
   final HomePageModel homePageModel;
 
-  const CategoryImageCards({this.homePageModel});
+  const CategoryImageCardFactory({this.homePageModel});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CategoryImageCards extends StatelessWidget {
               child: SizedBox(
                 width: 135,
                 height: 160,
-                child: AppCard(type: CardType.basic),
+                child: AppCard(), // type: CardType.basic
               ),
             );
           },
@@ -40,9 +41,11 @@ class CategoryImageCards extends StatelessWidget {
               width: 135,
               height: 160,
               child: AppCard(
-                onPressed: _onProductDetail,
+                onPressed: (){
+                  Navigator.pushNamed(context, PopularCategoryListFactoryPageRoute);
+                },
                 text: item.title,
-                type: CardType.basic,
+                numberOfLocation: item.totalItem,
                 image: item.image,
               ),
             ),
@@ -54,6 +57,7 @@ class CategoryImageCards extends StatelessWidget {
 
   ///On navigate product detail
   void _onProductDetail() {
-//    Navigator.pushNamed(context, Routes.productDetail);
+//    Navigator.pushNamed(context, PopularCategoryListFactoryPageRoute);
+
   }
 }

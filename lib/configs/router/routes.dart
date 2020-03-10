@@ -12,6 +12,7 @@ class Router {
       case splashRoute:
         return MaterialPageRoute(builder: (_) => SplashScreen());
       case homeRoute:
+      case '/Home':
         return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());

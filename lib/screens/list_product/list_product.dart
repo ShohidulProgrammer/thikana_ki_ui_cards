@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:thikana_ki/widgets/drawer/drawer_menu.dart';
 import '../../api/api.dart';
 import '../../configs/router/router_path_constants.dart';
 import '../../models/import_model.dart';
@@ -571,6 +572,7 @@ class _ListProductState extends State<ListProduct> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: DrawerMenu(),
       appBar: AppBar(
         centerTitle: true,
         title: Text(

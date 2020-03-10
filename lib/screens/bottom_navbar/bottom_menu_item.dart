@@ -14,5 +14,5 @@ const List<BottomMenuItem> allBottomMenuItems = <BottomMenuItem>[
   BottomMenuItem(title: 'Chat', icon: Icons.chat, color: Colors.orange),
   BottomMenuItem(
       title: 'Notifications', icon: Icons.notifications, color: Colors.blue),
-  BottomMenuItem(title: 'Account', icon: Icons.account_circle, color: Colors.blue),
+//  BottomMenuItem(title: 'Account', icon: Icons.account_circle, color: Colors.blue),
 ];

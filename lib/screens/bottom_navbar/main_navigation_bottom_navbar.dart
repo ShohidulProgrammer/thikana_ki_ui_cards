@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/widgets/drawer/drawer_menu.dart';
 import '../bottom_navbar/bottom_menu_item.dart';
 import '../home/home_page.dart';
 
@@ -31,6 +32,7 @@ class _MainNavigationBottomNavBarState extends State<MainNavigationBottomNavBar>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: DrawerMenu(),
       body: SafeArea(
         child: IndexedStack(
           index: _selectedIndex,
@@ -39,7 +41,7 @@ class _MainNavigationBottomNavBarState extends State<MainNavigationBottomNavBar>
             HomePage(),
             HomePage(),
             HomePage(),
-            HomePage(),
+//            HomePage(),
           ],
         ),
       ),

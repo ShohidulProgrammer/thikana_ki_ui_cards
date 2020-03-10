@@ -4,6 +4,7 @@ import 'package:thikana_ki/models/model_category.dart';
 import 'package:thikana_ki/models/model_result_api.dart';
 import 'package:thikana_ki/widgets/app_text_input.dart';
 import 'package:thikana_ki/widgets/category/app_category_item.dart';
+import 'package:thikana_ki/widgets/drawer/drawer_menu.dart';
 import '../../api/api.dart';
 import '../../models/screen_models/category_page_model.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -143,8 +144,9 @@ class _CategoryState extends State<Category> {
         centerTitle: true,
         title: Text('Category'
 //            Translate.of(context).translate('category')
-        ),
+            ),
       ),
+      drawer: DrawerMenu(),
       body: SafeArea(
         child: Column(
           children: <Widget>[

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/screens/popular/popular_categroy_iem_list_factory.dart';
+import 'package:thikana_ki/screens/product_detail/product_detail.dart';
 import '../../screens/bottom_navbar/main_navigation_bottom_navbar.dart';
 import '../../screens/category/category.dart';
 import '../../screens/list_product/list_product.dart';
@@ -16,6 +17,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
+        case productDetailPageRoute:
+        return MaterialPageRoute(builder: (_) => ProductDetail());
 
       case listProductPageRoute:
         final category = settings.arguments;

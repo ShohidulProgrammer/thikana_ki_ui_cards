@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/models/model_location.dart';
 
 class PopularCategoryIem extends StatelessWidget {
@@ -20,8 +21,7 @@ class PopularCategoryIem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => print("List Item pressed"),
-      // Navigator.of(context).pushNamed('/$title'),
+      onTap: () => Navigator.of(context).pushNamed(productDetailPageRoute),
       child: ListTile(
         title: Text(title),
         subtitle: Text(subTitle),

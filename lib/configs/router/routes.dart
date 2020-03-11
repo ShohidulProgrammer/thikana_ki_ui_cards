@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/screens/about_us/about_us.dart';
+import 'package:thikana_ki/screens/edit_profile/edit_profile.dart';
 import 'package:thikana_ki/screens/popular/popular_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/screens/product_detail/product_detail.dart';
+import '../../main_navigation.dart';
 import '../../screens/bottom_navbar/main_navigation_bottom_navbar.dart';
 import '../../screens/category/category.dart';
 import '../../screens/list_product/list_product.dart';
@@ -12,13 +15,21 @@ class Router {
     switch (settings.name) {
       case splashRoute:
         return MaterialPageRoute(builder: (_) => SplashScreen());
-      case homeRoute:
-      case '/Home':
+      case mainNavigationBottomPageRoute:
         return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
+      case mainNavigationRoute:
+      case '/Home':
+        return MaterialPageRoute(builder: (_) => MainNavigation());
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
-        case productDetailPageRoute:
+      case productDetailPageRoute:
         return MaterialPageRoute(builder: (_) => ProductDetail());
+      case AboutUsPageRoute:
+      case '/About Us':
+        return MaterialPageRoute(builder: (_) => AboutUs());
+      case EditProfilePageRoute:
+      case '/Edit Profile':
+        return MaterialPageRoute(builder: (_) => EditProfile());
 
       case listProductPageRoute:
         final category = settings.arguments;

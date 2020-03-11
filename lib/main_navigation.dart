@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:thikana_ki/blocs/authentication/bloc.dart';
-import 'package:thikana_ki/widgets/drawer/drawer_menu.dart';
-import '../bottom_navbar/bottom_menu_item.dart';
-import '../home/home_page.dart';
+import 'widgets/drawer/drawer_menu.dart';
+import 'screens/bottom_navbar/bottom_menu_item.dart';
+import 'screens/home/home_page.dart';
 
-class MainNavigationBottomNavBar extends StatefulWidget {
+class MainNavigation extends StatefulWidget {
   @override
-  _MainNavigationBottomNavBarState createState() =>
-      _MainNavigationBottomNavBarState();
+  _MainNavigationState createState() =>
+      _MainNavigationState();
 }
 
-class _MainNavigationBottomNavBarState
-    extends State<MainNavigationBottomNavBar> {
+class _MainNavigationState
+    extends State<MainNavigation> {
   int _selectedIndex = 0;
 
   @override
@@ -33,21 +31,18 @@ class _MainNavigationBottomNavBarState
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: DrawerMenu(),
-        body: BlocBuilder<AuthBloc, AuthenticationState>(
-            builder: (context, auth) {
-          return SafeArea(
-            child: IndexedStack(
-              index: _selectedIndex,
-              children: <Widget>[
-                HomePage(),
-                HomePage(),
-                HomePage(),
-                HomePage(),
+        body: SafeArea(
+          child: IndexedStack(
+            index: _selectedIndex,
+            children: <Widget>[
+              HomePage(),
+              HomePage(),
+              HomePage(),
+              HomePage(),
 //            HomePage(),
-              ],
-            ),
-          );
-        }),
+            ],
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: allBottomMenuItems.map((BottomMenuItem navBarItem) {
             return BottomNavigationBarItem(

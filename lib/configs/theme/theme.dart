@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/models/theme/theme_model.dart';
 import 'theme_collection.dart';
-import 'theme_model.dart';
+
 
 enum DarkOption { dynamic, alwaysOn, alwaysOff }
 

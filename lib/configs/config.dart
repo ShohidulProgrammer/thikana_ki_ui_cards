@@ -6,3 +6,5 @@ export 'routes.dart';
 export 'sort.dart';
 export 'theme.dart';
 export 'theme_collection.dart';
+export 'config.dart';
+export 'router/routes.dart';

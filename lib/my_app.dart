@@ -11,11 +11,6 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       title: 'Thikana Ki',
-//      theme: ThemeData(
-//        scaffoldBackgroundColor: Colors.white,
-//        buttonColor: Colors.lightGreen,
-//        primaryColor: Colors.green,
-//      ),
       onGenerateRoute: Router.generateRoute,
       initialRoute: splashRoute,
     );

@@ -10,5 +10,5 @@ export 'model_rate.dart';
 export 'model_result_api.dart';
 export 'model_sort.dart';
 export 'model_tag.dart';
-export 'model_theme.dart';
+export 'theme/theme_model.dart';
 export 'model_user.dart';

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thikana_ki/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/models/model_category.dart';
 import 'package:thikana_ki/models/model_result_api.dart';
+import 'package:thikana_ki/utils/language/translate.dart';
 import 'package:thikana_ki/widgets/app_text_input.dart';
 import 'package:thikana_ki/widgets/category/app_category_item.dart';
 import 'package:thikana_ki/widgets/drawer/drawer_menu.dart';
@@ -106,8 +107,7 @@ class _CategoryState extends State<Category> {
             Padding(
               padding: EdgeInsets.all(3.0),
               child: Text(
-                'Category not found',
-//                Translate.of(context).translate('category_not_found'),
+                Translate.of(context).translate('category_not_found'),
                 style: Theme.of(context).textTheme.body2,
               ),
             ),
@@ -142,9 +142,7 @@ class _CategoryState extends State<Category> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Category'
-//            Translate.of(context).translate('category')
-            ),
+        title: Text(Translate.of(context).translate('category')),
       ),
       drawer: DrawerMenu(),
       body: SafeArea(
@@ -158,8 +156,7 @@ class _CategoryState extends State<Category> {
                 bottom: 15,
               ),
               child: AppTextInput(
-                hintText: 'Search',
-                //Translate.of(context).translate('search'),
+                hintText: Translate.of(context).translate('search'),
                 onTapIcon: _onClearTapped,
                 icon: Icon(Icons.clear),
                 controller: _textController,
@@ -174,14 +171,13 @@ class _CategoryState extends State<Category> {
                 onRefresh: _onRefresh,
                 controller: _controller,
                 header: ClassicHeader(
-                  idleText: 'Pull down refresh',
-                  refreshingText: 'Refreshing',
-                  completeText: 'Refresh Completed',
-                  releaseText: 'Release to refresh',
-//                  idleText:Translate.of(context).translate('pull_down_refresh'),
-//                  refreshingText: Translate.of(context).translate('refreshing'),
-//                  completeText: Translate.of(context).translate('refresh_completed'),
-//                  releaseText: Translate.of(context).translate('release_to_refresh'),
+                  idleText:
+                      Translate.of(context).translate('pull_down_refresh'),
+                  refreshingText: Translate.of(context).translate('refreshing'),
+                  completeText:
+                      Translate.of(context).translate('refresh_completed'),
+                  releaseText:
+                      Translate.of(context).translate('release_to_refresh'),
                   refreshingIcon: SizedBox(
                     width: 16.0,
                     height: 16.0,

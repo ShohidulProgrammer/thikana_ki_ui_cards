@@ -35,18 +35,18 @@ class _TabBarBodyState extends State<TabBarBody> {
           SizedBox(height: 10.0),
           // emergency title
           CategoryTitle(
-              title: 'Emergency', image: 'assets/images/emergency.png'),
+              title: 'emergency', image: 'assets/images/emergency.png'),
           Container(
             height: 195,
             child: CategoryImageCardFactory(homePageModel: _homePage),
 //            child: _buildPopular(),
           ),
-          CategoryTitle(title: 'Get Offers', image: 'assets/images/offers.png'),
+          CategoryTitle(title: 'get_offers', image: 'assets/images/offers.png'),
           Container(
             height: 195,
             child: CategoryImageCardFactory(homePageModel: _homePage),
           ),
-          CategoryTitle(title: 'Partners', image: 'assets/images/partners.png'),
+          CategoryTitle(title: 'partners', image: 'assets/images/partners.png'),
           Container(
             height: 195,
             child: CategoryImageCardFactory(homePageModel: _homePage),

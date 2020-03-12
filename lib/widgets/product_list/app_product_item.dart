@@ -7,6 +7,7 @@ import 'app_star_rating.dart';
 import 'app_tag.dart';
 
 enum ProductType {
+  small,
   gird,
   list,
 }
@@ -27,7 +28,132 @@ class AppProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (type) {
 
-      ///Mode View Gird
+
+    ///Mode View Small
+      case ProductType.small:
+        if (item == null) {
+          return Shimmer.fromColors(
+            child: Row(
+              children: <Widget>[
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Container(
+                    width: 80,
+                    height: 80,
+                    color: Colors.white,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: 10,
+                    right: 10,
+                    top: 5,
+                    bottom: 5,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        height: 10,
+                        width: 200,
+                        color: Colors.white,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 5),
+                      ),
+                      Container(
+                        height: 10,
+                        width: 150,
+                        color: Colors.white,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10),
+                      ),
+                      Container(
+                        height: 10,
+                        width: 100,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            baseColor: Theme.of(context).hoverColor,
+            highlightColor: Theme.of(context).highlightColor,
+          );
+        }
+
+        return FlatButton(
+          onPressed: onPressed,
+          padding: EdgeInsets.all(0),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  item.image,
+                  width: 80,
+                  height: 80,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 10,
+                  right: 10,
+                  top: 5,
+                  bottom: 5,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      item.title,
+                      maxLines: 1,
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle
+                          .copyWith(fontWeight: FontWeight.w600),
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 5)),
+                    Text(
+                      item.subtitle,
+                      style: Theme.of(context)
+                          .textTheme
+                          .caption
+                          .copyWith(fontWeight: FontWeight.w600),
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 10)),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        AppTag(
+                          "${item.rate}",
+                          type: TagType.rateSmall,
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 5)),
+                        StarRating(
+                          rating: item.rate,
+                          size: 14,
+                          color: AppTheme.yellowColor,
+                          borderColor: AppTheme.yellowColor,
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        );
+
+
+    ///Mode View Gird
       case ProductType.gird:
         if (item == null) {
           return Shimmer.fromColors(

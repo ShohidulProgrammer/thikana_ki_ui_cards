@@ -32,7 +32,7 @@
   "input_email": "输入你的电子邮件",
   "information": "的信息",
   "input_information": "输入你的信息",
-  "value_not_empty": "输入不是空的",
+  "field_cannot_be_left_blank": "输入不是空的",
   "value_not_valid_range": "输入不有效范围",
   "value_not_valid_email": "输入，而不是有效的电子邮件",
   "value_not_valid_phone": "输入，而不是有效的电话",

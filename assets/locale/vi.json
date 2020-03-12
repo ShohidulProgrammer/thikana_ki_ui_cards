@@ -32,7 +32,7 @@
   "input_email": "Nhập email của bạn",
   "information": "Thông Tin",
   "input_information": "Nhập thông tin của bạn",
-  "value_not_empty": "Không được bỏ trống",
+  "field_cannot_be_left_blank": "Không được bỏ trống",
   "value_not_valid_range": "Không hợp lệ",
   "value_not_valid_email": "Email không hợp lệ",
   "value_not_valid_phone": "Số ĐT không hợp lệ",

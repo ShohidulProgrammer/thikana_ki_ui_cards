@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:thikana_ki/utils/language/translate.dart';
 import 'package:thikana_ki/widgets/drawer/drawer_menu.dart';
 import '../../api/api.dart';
 import '../../configs/router/router_path_constants.dart';
@@ -383,14 +384,10 @@ class _ListProductState extends State<ListProduct> {
           onLoading: _onLoading,
           controller: _controller,
           header: ClassicHeader(
-            idleText: 'pull_down_refresh',
-            refreshingText: 'refreshing',
-            completeText: 'refresh_completed',
-            releaseText: 'release_to_refresh',
-//            idleText: Translate.of(context).translate('pull_down_refresh'),
-//            refreshingText: Translate.of(context).translate('refreshing'),
-//            completeText: Translate.of(context).translate('refresh_completed'),
-//            releaseText: Translate.of(context).translate('release_to_refresh'),
+            idleText: Translate.of(context).translate('pull_down_refresh'),
+            refreshingText: Translate.of(context).translate('refreshing'),
+            completeText: Translate.of(context).translate('refresh_completed'),
+            releaseText: Translate.of(context).translate('release_to_refresh'),
             refreshingIcon: SizedBox(
               width: 16.0,
               height: 16.0,
@@ -398,14 +395,11 @@ class _ListProductState extends State<ListProduct> {
             ),
           ),
           footer: ClassicFooter(
-            loadingText: 'loading',
-            canLoadingText: 'release_to_load_more',
-            idleText: 'pull_to_load_more',
-//            loadingText: Translate.of(context).translate('loading'),
-//            canLoadingText: Translate.of(context).translate(
-//              'release_to_load_more',
-//            ),
-//            idleText: Translate.of(context).translate('pull_to_load_more'),
+            loadingText: Translate.of(context).translate('loading'),
+            canLoadingText: Translate.of(context).translate(
+              'release_to_load_more',
+            ),
+            idleText: Translate.of(context).translate('pull_to_load_more'),
             loadStyle: LoadStyle.ShowWhenLoading,
             loadingIcon: SizedBox(
               width: 16.0,
@@ -610,7 +604,7 @@ class _ListProductState extends State<ListProduct> {
 //                        onPressed: _onChangeSort,
 //                      ),
 //                      Text(
-//                        '${_currentSort.name}',
+//
 ////                        Translate.of(context).translate(_currentSort.name),
 //                        style: Theme.of(context).textTheme.subtitle,
 //                      )
@@ -663,8 +657,7 @@ class _ListProductState extends State<ListProduct> {
                       Padding(
                         padding: EdgeInsets.only(right: 20, left: 20),
                         child: Text(
-                          'filter',
-//                          Translate.of(context).translate('filter'),
+                          Translate.of(context).translate('filter'),
                           style: Theme.of(context).textTheme.subtitle,
                         ),
                       )

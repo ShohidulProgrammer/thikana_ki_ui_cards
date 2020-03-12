@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/utils/language/translate.dart';
 
 class SearchBar extends StatefulWidget {
   @override
@@ -47,12 +48,11 @@ class _SearchBarState extends State<SearchBar> {
 //                              labelText: 'Search Location',
 //                            ),
 //                          ),
+
                           child: Text(
-                            'Search Location',
-//                          child: Text(
-//                            Translate.of(context).translate(
-//                              'search_location',
-//                            ),
+                            Translate.of(context).translate(
+                              'search_location',
+                            ),
                             style: Theme.of(context)
                                 .textTheme
                                 .subtitle

@@ -9,10 +9,10 @@ class BottomMenuItem {
 }
 
 const List<BottomMenuItem> allBottomMenuItems = <BottomMenuItem>[
-  BottomMenuItem(title: 'Home', icon: Icons.home, color: Colors.teal),
-  BottomMenuItem(title: 'Whish List', icon: Icons.favorite, color: Colors.cyan),
-  BottomMenuItem(title: 'Chat', icon: Icons.chat, color: Colors.orange),
+  BottomMenuItem(title: 'home', icon: Icons.home, color: Colors.teal),
+  BottomMenuItem(title: 'wish_list', icon: Icons.favorite, color: Colors.cyan),
+  BottomMenuItem(title: 'chat', icon: Icons.chat, color: Colors.orange),
   BottomMenuItem(
-      title: 'Notifications', icon: Icons.notifications, color: Colors.blue),
+      title: 'notification', icon: Icons.notifications, color: Colors.blue),
 //  BottomMenuItem(title: 'Account', icon: Icons.account_circle, color: Colors.blue),
 ];

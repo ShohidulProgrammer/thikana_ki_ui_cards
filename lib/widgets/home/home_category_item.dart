@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/models/import_model.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:thikana_ki/utils/language/translate.dart';
 
 class HomeCategoryItem extends StatelessWidget {
   final CategoryModel item;
@@ -37,8 +38,7 @@ class HomeCategoryItem extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 3),
                 child: Text(
-                  'Loading',
-//                  Translate.of(context).translate('loading'),
+                  Translate.of(context).translate('loading'),
                   style: Theme.of(context)
                       .textTheme
                       .caption

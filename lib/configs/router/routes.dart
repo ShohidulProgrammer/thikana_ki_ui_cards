@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/screens/about_us/about_us.dart';
+import 'package:thikana_ki/screens/chat/chat.dart';
 import 'package:thikana_ki/screens/edit_profile/edit_profile.dart';
 import 'package:thikana_ki/screens/popular/popular_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/screens/product_detail/product_detail.dart';
@@ -30,6 +31,13 @@ class Router {
       case EditProfilePageRoute:
       case '/Edit Profile':
         return MaterialPageRoute(builder: (_) => EditProfile());
+      case ChatPageRoute:
+        final user = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) => Chat(
+            user: user,
+          ),
+        );
 
       case listProductPageRoute:
         final category = settings.arguments;

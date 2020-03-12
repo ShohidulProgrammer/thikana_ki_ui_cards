@@ -32,7 +32,7 @@
   "input_email": "입력하신 이메일",
   "information": "정보",
   "input_information": "입력하신 정보",
-  "value_not_empty": "입력하지 않은 빈",
+  "field_cannot_be_left_blank": "입력하지 않은 빈",
   "value_not_valid_range": "입력하지 않는 유효한 범위",
   "value_not_valid_email": "입력하지 않는 유효한 이메일",
   "value_not_valid_phone": "입력하지 않으며 유효한 전화",

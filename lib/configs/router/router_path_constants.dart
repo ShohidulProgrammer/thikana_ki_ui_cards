@@ -11,6 +11,8 @@ const String productDetailPageRoute = "/productDetail";
 const String PopularCategoryListFactoryPageRoute = "/popularCategoryListFactory";
 const String AboutUsPageRoute = "/aboutUs";
 const String EditProfilePageRoute = "/editProfile";
+const String ChatPageRoute = "/chat";
+
 
 
 

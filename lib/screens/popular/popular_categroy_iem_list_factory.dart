@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thikana_ki/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/models/model_category.dart';
 import 'package:thikana_ki/models/model_result_api.dart';
+import 'package:thikana_ki/utils/language/translate.dart';
 import 'package:thikana_ki/widgets/app_text_input.dart';
 import 'package:thikana_ki/widgets/category/app_category_item.dart';
 import 'package:thikana_ki/widgets/popular/popular_category_item.dart';
@@ -108,8 +109,8 @@ class _PopularCategoryListFactoryState
             Padding(
               padding: EdgeInsets.all(3.0),
               child: Text(
-                '${widget.popularTitle} Item not found',
-//                Translate.of(context).translate('category_not_found'),
+//                  widget.popularTitle,
+                Translate.of(context).translate('category_not_found'),
                 style: Theme.of(context).textTheme.body2,
               ),
             ),
@@ -147,8 +148,9 @@ class _PopularCategoryListFactoryState
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Emergency'), //Text('${widget.popularTitle}'
-//            Translate.of(context).translate('category')
+        title: Text(
+//            '${widget.popularTitle}'
+            Translate.of(context).translate('category')),
       ),
       body: SafeArea(
         child: Column(
@@ -161,8 +163,7 @@ class _PopularCategoryListFactoryState
                 bottom: 15,
               ),
               child: AppTextInput(
-                hintText: 'Search',
-                //Translate.of(context).translate('search'),
+                hintText: Translate.of(context).translate('search'),
                 onTapIcon: _onClearTapped,
                 icon: Icon(Icons.clear),
                 controller: _textController,
@@ -177,14 +178,13 @@ class _PopularCategoryListFactoryState
                 onRefresh: _onRefresh,
                 controller: _controller,
                 header: ClassicHeader(
-                  idleText: 'Pull down refresh',
-                  refreshingText: 'Refreshing',
-                  completeText: 'Refresh Completed',
-                  releaseText: 'Release to refresh',
-//                  idleText:Translate.of(context).translate('pull_down_refresh'),
-//                  refreshingText: Translate.of(context).translate('refreshing'),
-//                  completeText: Translate.of(context).translate('refresh_completed'),
-//                  releaseText: Translate.of(context).translate('release_to_refresh'),
+                  idleText:
+                      Translate.of(context).translate('pull_down_refresh'),
+                  refreshingText: Translate.of(context).translate('refreshing'),
+                  completeText:
+                      Translate.of(context).translate('refresh_completed'),
+                  releaseText:
+                      Translate.of(context).translate('release_to_refresh'),
                   refreshingIcon: SizedBox(
                     width: 16.0,
                     height: 16.0,

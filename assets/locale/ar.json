@@ -32,7 +32,7 @@
   "input_email": "إدخال البريد الإلكتروني الخاص بك",
   "information": "معلومات",
   "input_information": "إدخال المعلومات الخاصة بك",
-  "value_not_empty": "المدخلات ليست فارغة",
+  "field_cannot_be_left_blank": "المدخلات ليست فارغة",
   "value_not_valid_range": "القيمة غير صالحة",
   "value_not_valid_email": "البريد الإلكتروني غير صالح",
   "value_not_valid_phone": "الهاتف غير صالح",

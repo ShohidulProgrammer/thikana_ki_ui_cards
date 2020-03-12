@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../utils/language/translate.dart';
 
 class CategoryTitle extends StatelessWidget {
   final String title;
@@ -18,8 +19,7 @@ class CategoryTitle extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            title,
-//                          Translate.of(context).translate('popular_location'),
+            Translate.of(context).translate(title),
             style: Theme.of(context)
                 .textTheme
                 .title

@@ -1,7 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:thikana_ki/configs/sort.dart';
 import 'package:thikana_ki/utils/language/translate.dart';
 import 'package:thikana_ki/widgets/drawer/drawer_menu.dart';
 import '../../api/api.dart';
@@ -29,19 +32,19 @@ class _ListProductState extends State<ListProduct> {
 
   bool _gettingLocation = false;
 
-//  LocationModel _currentLocation;
-//  GoogleMapController _mapController;
+  LocationModel _currentLocation;
+  GoogleMapController _mapController;
   int _indexLocation = 0;
 
-//  MapType _mapType = MapType.normal;
-//  CameraPosition _initPosition;
-//  Map<MarkerId, Marker> _markers = <MarkerId, Marker>{};
+  MapType _mapType = MapType.normal;
+  CameraPosition _initPosition;
+  Map<MarkerId, Marker> _markers = <MarkerId, Marker>{};
   PageType _pageType = PageType.list;
   ProductType _modeView = ProductType.gird;
   ProductListPageModel _productList;
 
-//  SortModel _currentSort = AppSort.defaultSort;
-//  List<SortModel> _listSort = AppSort.listSortDefault;
+  SortModel _currentSort = AppSort.defaultSort;
+  List<SortModel> _listSort = AppSort.listSortDefault;
 
   @override
   void initState() {
@@ -55,29 +58,29 @@ class _ListProductState extends State<ListProduct> {
     if (result.success) {
       final listProduct = ProductListPageModel.fromJson(result.data);
 
-//      ///Setup list marker map from list
-//      listProduct.list.forEach((item) {
-//        final markerId = MarkerId(item.id.toString());
-//        final marker = Marker(
-//          markerId: markerId,
-//          position: LatLng(item.location.lat, item.location.long),
-//          infoWindow: InfoWindow(title: item.title),
-//          onTap: () {
-//            _onSelectLocation(item);
-//          },
-//        );
-//        _markers[markerId] = marker;
-//      });
+      ///Setup list marker map from list
+      listProduct.list.forEach((item) {
+        final markerId = MarkerId(item.id.toString());
+        final marker = Marker(
+          markerId: markerId,
+          position: LatLng(item.location.lat, item.location.long),
+          infoWindow: InfoWindow(title: item.title),
+          onTap: () {
+            _onSelectLocation(item);
+          },
+        );
+        _markers[markerId] = marker;
+      });
 
       setState(() {
         _productList = listProduct;
-//        _initPosition = CameraPosition(
-//          target: LatLng(
-//            listProduct.list[0].location.lat,
-//            listProduct.list[0].location.long,
-//          ),
-//          zoom: 14.4746,
-//        );
+        _initPosition = CameraPosition(
+          target: LatLng(
+            listProduct.list[0].location.lat,
+            listProduct.list[0].location.long,
+          ),
+          zoom: 14.4746,
+        );
       });
     }
   }
@@ -120,11 +123,9 @@ class _ListProductState extends State<ListProduct> {
 //        _modeView = ProductType.list;
 //        break;
 //      case ProductType.list:
-//        _modeView = ProductType.block;
-//        break;
-//      case ProductType.block:
 //        _modeView = ProductType.gird;
 //        break;
+//
 //      default:
 //        return;
 //    }
@@ -156,21 +157,21 @@ class _ListProductState extends State<ListProduct> {
 
   ///On change map style
   void _onChangeMapStyle() {
-//    MapType type = _mapType;
-//    switch (_mapType) {
-//      case MapType.normal:
-//        type = MapType.hybrid;
-//        break;
-//      case MapType.hybrid:
-//        type = MapType.normal;
-//        break;
-//      default:
-//        type = MapType.normal;
-//        break;
-//    }
-//    setState(() {
-//      _mapType = type;
-//    });
+    MapType type = _mapType;
+    switch (_mapType) {
+      case MapType.normal:
+        type = MapType.hybrid;
+        break;
+      case MapType.hybrid:
+        type = MapType.normal;
+        break;
+      default:
+        type = MapType.normal;
+        break;
+    }
+    setState(() {
+      _mapType = type;
+    });
   }
 
   ///On tap marker map location
@@ -185,20 +186,20 @@ class _ListProductState extends State<ListProduct> {
       _indexLocation = index;
     });
 
-//    ///Camera animated
-//    _mapController.animateCamera(
-//      CameraUpdate.newCameraPosition(
-//        CameraPosition(
-//          bearing: 270.0,
-//          target: LatLng(
-//            _productList.list[_indexLocation].location.lat,
-//            _productList.list[_indexLocation].location.long,
-//          ),
-//          tilt: 30.0,
-//          zoom: 15.0,
-//        ),
-//      ),
-//    );
+    ///Camera animated
+    _mapController.animateCamera(
+      CameraUpdate.newCameraPosition(
+        CameraPosition(
+          bearing: 270.0,
+          target: LatLng(
+            _productList.list[_indexLocation].location.lat,
+            _productList.list[_indexLocation].location.long,
+          ),
+          tilt: 30.0,
+          zoom: 15.0,
+        ),
+      ),
+    );
   }
 
   ///On navigate Product detail
@@ -226,59 +227,58 @@ class _ListProductState extends State<ListProduct> {
 //    }
 //  }
 
-//  ///On get location
-//  Future<void> _getLocation({bool focus = false}) async {
-//    setState(() {
-//      _gettingLocation = true;
-//    });
-//    try {
-//      var currentLocation = await Geolocator().getCurrentPosition(
-//        desiredAccuracy: LocationAccuracy.bestForNavigation,
-//      );
-//      if (currentLocation?.latitude != null) {
-//        setState(() {
-//          _currentLocation = LocationModel(
-//            1,
-//            "Your location",
-//            currentLocation.latitude,
-//            currentLocation.longitude,
-//          );
-//          _gettingLocation = false;
-//        });
-//
-//        ///Camera animated
-//        if (focus) {
-//          _mapController.animateCamera(
-//            CameraUpdate.newCameraPosition(
-//              CameraPosition(
-//                bearing: 270.0,
-//                target: LatLng(
-//                  _currentLocation.lat,
-//                  _currentLocation.long,
-//                ),
-//                tilt: 30.0,
-//                zoom: 15.0,
-//              ),
-//            ),
-//          );
-//        }
-//      }
-//    } catch (e) {
-//      _showMessage(e.toString());
-//      setState(() {
-//        _gettingLocation = false;
-//      });
-//    }
-//  }
-//
-//  ///On show message fail
-//  void _showMessage(String message) {
-//    final snackBar = SnackBar(
-//      content: Text('Please enable location service via setting your phone'),
-//    );
-//
-//    Scaffold.of(context).showSnackBar(snackBar);
-//  }
+  ///On get location
+  Future<void> _getLocation({bool focus = false}) async {
+    setState(() {
+      _gettingLocation = true;
+    });
+    try {
+      var currentLocation = await Geolocator().getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.bestForNavigation,
+      );
+      if (currentLocation?.latitude != null) {
+        setState(() {
+          _currentLocation = LocationModel(
+            1,
+            "Your location",
+            currentLocation.latitude,
+            currentLocation.longitude,
+          );
+          _gettingLocation = false;
+        });
+
+        ///Camera animated
+        if (focus) {
+          _mapController.animateCamera(
+            CameraUpdate.newCameraPosition(
+              CameraPosition(
+                bearing: 270.0,
+                target: LatLng(
+                  _currentLocation.lat,
+                  _currentLocation.long,
+                ),
+                tilt: 30.0,
+                zoom: 15.0,
+              ),
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      _showMessage(e.toString());
+      setState(() {
+        _gettingLocation = false;
+      });
+    }
+  }
+
+  ///On show message fail
+  void _showMessage(String message) {
+    final snackBar = SnackBar(
+      content: Text('Please enable location service via setting your phone'),
+    );
+    Scaffold.of(context).showSnackBar(snackBar);
+  }
 
   ///_build Item Loading
   Widget _buildItemLoading(ProductType type) {
@@ -424,17 +424,17 @@ class _ListProductState extends State<ListProduct> {
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: <Widget>[
-//          GoogleMap(
-//            onMapCreated: (controller) {
-//              _mapController = controller;
-//              _getLocation();
-//            },
-//            mapType: _mapType,
-//            initialCameraPosition: _initPosition,
-//            markers: Set<Marker>.of(_markers.values),
-//            myLocationEnabled: true,
-//            myLocationButtonEnabled: false,
-//          ),
+          GoogleMap(
+            onMapCreated: (controller) {
+              _mapController = controller;
+              _getLocation();
+            },
+            mapType: _mapType,
+            initialCameraPosition: _initPosition,
+            markers: Set<Marker>.of(_markers.values),
+            myLocationEnabled: true,
+            myLocationButtonEnabled: false,
+          ),
           SafeArea(
             bottom: false,
             top: false,
@@ -470,7 +470,7 @@ class _ListProductState extends State<ListProduct> {
                         ),
                         InkWell(
                           onTap: () {
-//                            _getLocation(focus: true);
+                            _getLocation(focus: true);
                           },
                           child: _gettingLocation
                               ? Container(

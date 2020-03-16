@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/utils/language/translate.dart';
-import 'screens/chat/chat.dart';
 import 'screens/message/message.dart';
 import 'screens/notification/notification.dart';
 import 'screens/wishlist/wishlist.dart';

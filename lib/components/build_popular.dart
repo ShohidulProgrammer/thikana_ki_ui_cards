@@ -41,8 +41,9 @@ class CategoryImageCardFactory extends StatelessWidget {
               width: 135,
               height: 160,
               child: AppCard(
-                onPressed: (){
-                  Navigator.pushNamed(context, PopularCategoryListFactoryPageRoute);
+                onPressed: () {
+                  Navigator.pushNamed(
+                      context, PopularCategoryListFactoryPageRoute);
                 },
                 text: item.title,
                 numberOfLocation: item.totalItem,
@@ -53,11 +54,5 @@ class CategoryImageCardFactory extends StatelessWidget {
         },
       ).toList(),
     );
-  }
-
-  ///On navigate product detail
-  void _onProductDetail() {
-//    Navigator.pushNamed(context, PopularCategoryListFactoryPageRoute);
-
   }
 }

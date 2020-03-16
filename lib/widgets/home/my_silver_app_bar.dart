@@ -16,7 +16,7 @@ class MySliverAppBar extends SliverPersistentHeaderDelegate {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
-        GoogleMap(),
+        MyGoogleMap(),
         SearchBar(),
         SilverTabBar(),
       ],

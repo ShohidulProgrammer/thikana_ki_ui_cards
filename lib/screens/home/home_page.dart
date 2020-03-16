@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thikana_ki/screens/shop/grid_card_list.dart';
 import '../../widgets/home/my_silver_app_bar.dart';
 import '../../widgets/home/tab_bar_body.dart';
 
@@ -19,8 +20,8 @@ class HomePage extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             TabBarBody(),
-            TabBarBody(),
-            TabBarBody(),
+            Shop(),
+            Shop(),
           ],
         ),
       ),

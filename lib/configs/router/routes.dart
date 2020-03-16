@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/screens/about_us/about_us.dart';
+import 'package:thikana_ki/screens/change_password/change_password.dart';
 import 'package:thikana_ki/screens/chat/chat.dart';
+import 'package:thikana_ki/screens/contact_us/contact_us.dart';
 import 'package:thikana_ki/screens/edit_profile/edit_profile.dart';
+import 'package:thikana_ki/screens/gallery/gallery.dart';
+import 'package:thikana_ki/screens/location/location.dart';
+import 'package:thikana_ki/screens/photo_preview/photo_preview.dart';
 import 'package:thikana_ki/screens/popular/popular_categroy_iem_list_factory.dart';
 import 'package:thikana_ki/screens/product_detail/product_detail.dart';
+import 'package:thikana_ki/screens/settings/font_setting/font_setting.dart';
+import 'package:thikana_ki/screens/settings/language_setting/language_setting.dart';
+import 'package:thikana_ki/screens/settings/setting/setting.dart';
+import 'package:thikana_ki/screens/settings/theme_setting/theme_setting.dart';
 import '../../main_navigation.dart';
 import '../../screens/bottom_navbar/main_navigation_bottom_navbar.dart';
 import '../../screens/category/category.dart';
@@ -25,13 +34,15 @@ class Router {
         return MaterialPageRoute(builder: (_) => Category());
       case productDetailPageRoute:
         return MaterialPageRoute(builder: (_) => ProductDetail());
-      case AboutUsPageRoute:
+      case aboutUsPageRoute:
       case '/About Us':
         return MaterialPageRoute(builder: (_) => AboutUs());
-      case EditProfilePageRoute:
+      case editProfilePageRoute:
       case '/Edit Profile':
         return MaterialPageRoute(builder: (_) => EditProfile());
-      case ChatPageRoute:
+      case contactUsPageRoute:
+        return MaterialPageRoute(builder: (_) => ContactUs());
+      case chatPageRoute:
         final user = settings.arguments;
         return MaterialPageRoute(
           builder: (context) => Chat(
@@ -51,6 +62,45 @@ class Router {
           builder: (context) =>
               PopularCategoryListFactory(popularTitle: popularTitle),
         );
+      case changePasswordPageRoute:
+      case '/Change Password':
+        return MaterialPageRoute(builder: (_) => ChangePassword());
+      case settingPageRoute:
+        return MaterialPageRoute(builder: (context) => Setting());
+      case changeLanguagePageRoute:
+        return MaterialPageRoute(builder: (context) => LanguageSetting());
+      case themeSettingPageRoute:
+        return MaterialPageRoute(builder: (context) => ThemeSetting());
+      case fontSettingPageRoute:
+        return MaterialPageRoute(builder: (context) => FontSetting());
+      case photoPreviewPageRoute:
+        final Map<String, dynamic> params = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) => PhotoPreview(
+            galleryList: params['photo'],
+            initialIndex: params['index'],
+          ),
+          fullscreenDialog: true,
+        );
+
+      case galleryPageRoute:
+        final photo = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) => Gallery(photo: photo),
+          fullscreenDialog: true,
+        );
+
+      case locationPageRoute:
+        final location = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) => Location(
+            location: location,
+          ),
+        );
+
+
+
+
 //      case signUpRoute:
 //        return MaterialPageRoute(builder: (_) => SignUpPage());
 //      case otpInputPageRoute:

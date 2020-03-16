@@ -41,7 +41,7 @@ class _TabBarBodyState extends State<TabBarBody> {
             child: CategoryImageCardFactory(homePageModel: _homePage),
 //            child: _buildPopular(),
           ),
-          CategoryTitle(title: 'get_offers', image: 'assets/images/offers.png'),
+          CategoryTitle(title: 'restaurants', image: 'assets/images/offers.png'),
           Container(
             height: 195,
             child: CategoryImageCardFactory(homePageModel: _homePage),

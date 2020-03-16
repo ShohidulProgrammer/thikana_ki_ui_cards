@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:thikana_ki/main_navigation.dart';
 import 'blocs/bloc.dart';
 
 import 'configs/config.dart';
@@ -85,13 +86,13 @@ class _AppState extends State<App> {
                 home: BlocBuilder<ApplicationBloc, ApplicationState>(
                   builder: (context, app) {
                     if (app is ApplicationSetupCompleted) {
-                      return MainNavigationBottomNavBar();
+                      return MainNavigation();
                     }
                     if (app is ApplicationIntroView) {
                       return IntroPreview();
                     }
 //                    return SplashScreen();
-                  return MainNavigationBottomNavBar();
+                  return MainNavigation();
                   },
                 ),
               );

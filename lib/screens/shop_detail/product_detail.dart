@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:thikana_ki/configs/router/router_path_constants.dart';
 import 'package:thikana_ki/utils/language/translate.dart';
+import 'package:thikana_ki/widgets/shop_detail/carousel_shop_image.dart';
 import '../../models/model_result_api.dart';
 import '../../widgets/product_list/app_star_rating.dart';
 import '../../widgets/product_list/app_tag.dart';
@@ -91,10 +92,12 @@ class _ProductDetailState extends State<ProductDetail> {
       );
     }
 
-    return Image.asset(
-      _detailPage.banner,
-      fit: BoxFit.cover,
-    );
+    return CarouselPage();
+
+//    return Image.asset(
+//      _detailPage.banner,
+//      fit: BoxFit.cover,
+//    );
   }
 
   ///Build user UI
@@ -859,6 +862,7 @@ class _ProductDetailState extends State<ProductDetail> {
         headerSliverBuilder: (context, bool) {
           return <Widget>[
             SliverAppBar(
+              backgroundColor: Colors.white,
               centerTitle: true,
               expandedHeight: 200.0,
               floating: true,
@@ -877,6 +881,7 @@ class _ProductDetailState extends State<ProductDetail> {
               ],
               flexibleSpace: FlexibleSpaceBar(
                 collapseMode: CollapseMode.parallax,
+
                 background: _buildBanner(),
               ),
             ),

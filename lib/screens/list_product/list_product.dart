@@ -319,7 +319,7 @@ class _ListProductState extends State<ListProduct> {
             padding: EdgeInsets.only(left: 15),
             child: AppProductItem(
               onPressed: () {
-                Navigator.pushNamed(context, productDetailPageRoute);
+                Navigator.pushNamed(context, shopDetailPageRoute);
               },
               item: item,
               type: _modeView,
@@ -332,7 +332,7 @@ class _ListProductState extends State<ListProduct> {
           padding: EdgeInsets.only(left: 15),
           child: AppProductItem(
             onPressed: () {
-              Navigator.pushNamed(context, productDetailPageRoute);
+              Navigator.pushNamed(context, shopDetailPageRoute);
             },
             item: item,
             type: _modeView,
@@ -342,7 +342,7 @@ class _ListProductState extends State<ListProduct> {
       default:
         return AppProductItem(
           onPressed: () {
-            Navigator.pushNamed(context, productDetailPageRoute);
+            Navigator.pushNamed(context, shopDetailPageRoute);
           },
           item: item,
           type: _modeView,

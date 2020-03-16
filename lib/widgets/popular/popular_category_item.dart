@@ -21,7 +21,7 @@ class PopularCategoryIem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.of(context).pushNamed(productDetailPageRoute),
+      onTap: () => Navigator.of(context).pushNamed(shopDetailPageRoute),
       child: ListTile(
         title: Text(title),
         subtitle: Text(subTitle),

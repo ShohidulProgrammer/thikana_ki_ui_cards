@@ -51,7 +51,7 @@ class _WishListState extends State<WishList> {
 
   ///On navigate product detail
   void _onProductDetail() {
-    Navigator.pushNamed(context, productDetailPageRoute);
+    Navigator.pushNamed(context, shopDetailPageRoute);
   }
 
   ///Build list

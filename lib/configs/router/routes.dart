@@ -8,13 +8,12 @@ import 'package:thikana_ki/screens/gallery/gallery.dart';
 import 'package:thikana_ki/screens/location/location.dart';
 import 'package:thikana_ki/screens/photo_preview/photo_preview.dart';
 import 'package:thikana_ki/screens/popular/popular_categroy_iem_list_factory.dart';
-import 'package:thikana_ki/screens/product_detail/product_detail.dart';
 import 'package:thikana_ki/screens/settings/font_setting/font_setting.dart';
 import 'package:thikana_ki/screens/settings/language_setting/language_setting.dart';
 import 'package:thikana_ki/screens/settings/setting/setting.dart';
 import 'package:thikana_ki/screens/settings/theme_setting/theme_setting.dart';
+import 'package:thikana_ki/screens/shop_detail/product_detail.dart';
 import '../../main_navigation.dart';
-import '../../screens/bottom_navbar/main_navigation_bottom_navbar.dart';
 import '../../screens/category/category.dart';
 import '../../screens/list_product/list_product.dart';
 import '../../screens/splash/splash_screen.dart';
@@ -25,14 +24,14 @@ class Router {
     switch (settings.name) {
       case splashRoute:
         return MaterialPageRoute(builder: (_) => SplashScreen());
-      case mainNavigationBottomPageRoute:
-        return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
+//      case mainNavigationBottomPageRoute:
+//        return MaterialPageRoute(builder: (_) => MainNavigationBottomNavBar());
       case mainNavigationRoute:
       case '/Home':
         return MaterialPageRoute(builder: (_) => MainNavigation());
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
-      case productDetailPageRoute:
+      case shopDetailPageRoute:
         return MaterialPageRoute(builder: (_) => ProductDetail());
       case aboutUsPageRoute:
       case '/About Us':

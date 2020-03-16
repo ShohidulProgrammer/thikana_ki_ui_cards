@@ -23,10 +23,9 @@ class SmallCard extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 20.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Image.network(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9vAP24XvNRDnkwgwUmN72s4DnitZMjMHFh22U4bAf30PZu1p3',
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTpjEka_FWyPfQBgiQg4QUDRZc1BeWqiNjurXPbnDc7vUMshkC9',
                     // width: 300,
 //                  height: 100,
                     fit: BoxFit.contain,

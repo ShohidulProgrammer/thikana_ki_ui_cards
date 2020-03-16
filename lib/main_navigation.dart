@@ -33,6 +33,8 @@ class _MainNavigationState extends State<MainNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: DrawerMenu(),
+//          appBar: AppBar(),
+//        drawerScrimColor: Colors.red,
         body: SafeArea(
           child: IndexedStack(
             index: _selectedIndex,

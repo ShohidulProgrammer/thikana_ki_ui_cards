@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/screens/about_us/about_us.dart';
-import 'package:thikana_ki/screens/change_password/change_password.dart';
-import 'package:thikana_ki/screens/chat/chat.dart';
-import 'package:thikana_ki/screens/contact_us/contact_us.dart';
-import 'package:thikana_ki/screens/edit_profile/edit_profile.dart';
-import 'package:thikana_ki/screens/gallery/gallery.dart';
-import 'package:thikana_ki/screens/location/location.dart';
-import 'package:thikana_ki/screens/photo_preview/photo_preview.dart';
-import 'package:thikana_ki/screens/popular/popular_categroy_iem_list_factory.dart';
-import 'package:thikana_ki/screens/settings/font_setting/font_setting.dart';
-import 'package:thikana_ki/screens/settings/language_setting/language_setting.dart';
-import 'package:thikana_ki/screens/settings/setting/setting.dart';
-import 'package:thikana_ki/screens/settings/theme_setting/theme_setting.dart';
-import 'package:thikana_ki/screens/shop_detail/product_detail.dart';
-import '../../main_navigation.dart';
-import '../../screens/category/category.dart';
-import '../../screens/list_product/list_product.dart';
-import '../../screens/splash/splash_screen.dart';
+import 'package:thikana_ki/UI/screens/about_us/about_us.dart';
+import 'package:thikana_ki/UI/screens/change_password/change_password.dart';
+import 'package:thikana_ki/UI/screens/chat/chat.dart';
+import 'package:thikana_ki/UI/screens/contact_us/contact_us.dart';
+import 'package:thikana_ki/UI/screens/edit_profile/edit_profile.dart';
+import 'package:thikana_ki/UI/screens/gallery/gallery.dart';
+import 'package:thikana_ki/UI/screens/location/location.dart';
+import 'package:thikana_ki/UI/screens/photo_preview/photo_preview.dart';
+import 'package:thikana_ki/UI/screens/popular/popular_categroy_iem_list_factory.dart';
+import 'package:thikana_ki/UI/screens/settings/font_setting/font_setting.dart';
+import 'package:thikana_ki/UI/screens/settings/language_setting/language_setting.dart';
+import 'package:thikana_ki/UI/screens/settings/setting/setting.dart';
+import 'package:thikana_ki/UI/screens/settings/theme_setting/theme_setting.dart';
+import 'package:thikana_ki/UI/screens/shop_detail/product_detail.dart';
+import 'package:thikana_ki/UI/screens/shop_detail/shop_details.dart';
+import '../../UI/screens/home/main_navigation.dart';
+import '../../UI/screens/category/category.dart';
+import '../../UI/screens/list_product/list_product.dart';
+import '../../UI/screens/splash/splash_screen.dart';
 import 'router_path_constants.dart';
 
 class Router {
@@ -32,7 +33,7 @@ class Router {
       case categoryPageRoute:
         return MaterialPageRoute(builder: (_) => Category());
       case shopDetailPageRoute:
-        return MaterialPageRoute(builder: (_) => ProductDetail());
+        return MaterialPageRoute(builder: (_) => ShopDetails());
       case aboutUsPageRoute:
       case '/About Us':
         return MaterialPageRoute(builder: (_) => AboutUs());

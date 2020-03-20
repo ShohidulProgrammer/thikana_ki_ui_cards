@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:thikana_ki/UI/data_list/home/home_page_tabs.dart';
-import 'package:thikana_ki/UI/abstruct/sliver_page.dart';
+import '../../data_list/home/home_page_tabs.dart';
+import '../../abstruct/sliver_page.dart';
 import '../../../configs/router/router_path_constants.dart';
 import '../../../utils/language/translate.dart';
 import '../../abstruct/carousel_banner_image.dart';
@@ -30,7 +30,6 @@ class _ProductDetailState extends State<ProductDetail> {
   bool isEditor = false;
   bool isOpen = false;
 
-
   @override
   void initState() {
     _loadData();
@@ -52,7 +51,6 @@ class _ProductDetailState extends State<ProductDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-
       body: NestedScrollView(
         headerSliverBuilder: (context, bool) {
           return <Widget>[
@@ -96,9 +94,9 @@ class _ProductDetailState extends State<ProductDetail> {
         body: SafeArea(
           top: false,
           child: SingleChildScrollView(
-           child: MyAbstractSliverPage(
-             sliverBodyItems: homePageSliverTabBarBodies,
-           ),
+            child: MyAbstractSliverPage(
+              sliverBodyItems: homePageSliverTabBarBodies,
+            ),
           ),
         ),
       ),

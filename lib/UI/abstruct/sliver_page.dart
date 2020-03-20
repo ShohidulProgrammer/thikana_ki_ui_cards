@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'my_silver_header.dart';
+import 'my_sliver_header.dart';
 
 class MyAbstractSliverPage extends StatelessWidget {
   final List<Widget> sliverHeaderItems;

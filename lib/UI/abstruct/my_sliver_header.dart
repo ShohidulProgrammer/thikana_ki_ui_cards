@@ -17,7 +17,7 @@ class MyAbstractSliverHeader extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  double get maxExtent => expandedHeight;
+  double get maxExtent => expandedHeight; //250
 
   @override
   double get minExtent => 50;
